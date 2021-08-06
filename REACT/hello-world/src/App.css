@@ -1,9 +1,14 @@
 .App {
-  text-align: center;
-  display:flex; flex-direction:row;
-  
- 
-
+  /* text-align: center; */
+  display:flex; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: space-between;
+  gap: 40px;
+  flex:1;
+  display: -webkit-flex;
+  padding: 30px;
   
 }
 
@@ -42,6 +47,10 @@
   }
 }
 
-.dummyClass {
+
+.Test {
+  background-color: #3f10ac;
+  padding: 30px;
   text-align: center;
+  font-size: 35px;
 }
