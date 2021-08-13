@@ -1,21 +1,17 @@
 import React from 'react'
 
-// function Greet() {
-//     return <h1>Hello Ben</h1> 
-// }
-
-const Greet = ({name, heroName, children}) => {
+const DynamicProp = ({name}) => {
     //you can destructure the object in the arguments ({name, heroName}) 
     // or in the function body
     // const {name, heroName} = props
     return ( 
         <div>
-        <h1>
-            Hello {name} a.k.a {heroName}
-        </h1>
-        {children}
+        <h2>
+         {name} , this is a dynamic prop.
+        </h2>
+        
         </div>
     )
  } 
 
-export default Greet
+export default DynamicProp
