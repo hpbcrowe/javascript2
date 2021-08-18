@@ -99,8 +99,15 @@ document.getElementById("year").innerHTML = currentYear;
 
 // Step 1: Declare and instantiate an array variable to hold the numbers 1 through 25
 
-let numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-     22, 23, 24, 25]
+// let numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+//      22, 23, 24, 25]
+
+let numbers = [];
+
+for (let i = 0; i <  25; i++){
+   numbers[i] = i + 1;
+   
+}
 
 // Step 2: Assign the value of the array variable to the HTML element with an ID of "array"
 
