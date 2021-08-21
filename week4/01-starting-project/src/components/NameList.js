@@ -1,7 +1,8 @@
 import React from 'react'
 import Person from './Person';
+import './myStyles.css';
 
-function NameList() {
+function NameList(props) {
         //Changed from an array of names to object 
         //Added Person component to create the jsx to display list
         const names = ['Bruce', 'Clark', 'Diana'];
@@ -36,7 +37,7 @@ function NameList() {
     
         // return <div>{personList}</div>  
         const nameList = names.map((name, index) => <h2 key={index}>{index} {name}</h2>)
-    
+       
         return <div>{nameList}</div>  
 }
 
