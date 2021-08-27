@@ -13,6 +13,8 @@ const Projects = ({ user }) => {
             <ProjectItem key={i}>
               <ProjectTitle>{project.name}</ProjectTitle>
               <p>{project.summary}</p>
+              <p>{project.url}</p>
+              <p>{project.githubUrl}</p>
               <SkillContainer>
                 {[...project.languages, ...project.libraries].map((item, j) => (
                   <Pill key={j}>{item}</Pill>

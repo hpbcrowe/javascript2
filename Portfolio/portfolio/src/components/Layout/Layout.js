@@ -7,14 +7,14 @@ import { StyledContent } from './styles';
 
 const Layout = ({ user, children }) => {
   return (
-   <div>
+    <>
       <MobileNav />
       <Sidebar />
       <StyledContent>
         <UserHeader user={user} />
         <div>{children}</div>
       </StyledContent>
-   </div>
+    </>
   );
 };
 
