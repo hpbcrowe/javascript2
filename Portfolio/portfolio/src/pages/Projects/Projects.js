@@ -14,7 +14,9 @@ const Projects = ({ user }) => {
               <ProjectTitle>{project.name}</ProjectTitle>
               <p>{project.summary}</p>
               <p>{project.url}</p>
+              <a href={project.url}>Click Here</a>
               <p>{project.githubUrl}</p>
+              <a href={project.githubUrl}>Click Here for Repo</a>
               <SkillContainer>
                 {[...project.languages, ...project.libraries].map((item, j) => (
                   <Pill key={j}>{item}</Pill>
