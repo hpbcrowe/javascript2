@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Functions with Parameters Week06A</title>
+    <script>
+      /*                                  Defining Table
+       *     Input                         Processing                  Output
+       *
+       *
+       */
+
+      function computeFutureValue(principal, intRate, numYears, periods) {
+        // f = a(1 + r)n
+        //futureValue = investment( 1 + Growth rate per period) power of number of periods
+        //From Stack Overflow  ((p*(Math.pow((1+r),tpp))) + (A*(Math.pow((1+rate),nper) - 1)/rate));
+        // https://stackoverflow.com/questions/58618869/converting-future-value
+        //-calculation-of-compound-interest-calculator-to-javascrip
+        let futureValue =
+          principal * Math.pow(1 + intRate / periods, numYears * periods);
+
+        return "$ " + futureValue.toFixed(2);
+      }
+
+      /* The first function (doFV) does the following:
+       * Takes no parameters.
+       * Is called from the onclick attribute.
+       * Gets input from the user.
+       * Calls the computeFutureValue function.
+       * Displays the result to the user.
+       */
+      function doFV() {
+        let principal = parseFloat(document.getElementById("principal").value);
+        let intRate = parseFloat(document.getElementById("rate").value);
+        let numYears = parseFloat(document.getElementById("years").value);
+        let periods = parseFloat(
+          document.getElementById("periodsPerYear").value
+        );
+
+        let amount = computeFutureValue(principal, intRate, numYears, periods);
+
+        document.getElementById("answer").innerHTML = amount;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Investment Calculator</h1>
+    <table>
+      <tr>
+        <td>Amount invested (principal)</td>
+        <td><input type="text" id="principal" /></td>
+      </tr>
+      <tr>
+        <td>Annual rate (example: .08))</td>
+        <td><input type="text" id="rate" /></td>
+      </tr>
+      <tr>
+        <td>Number of years</td>
+        <td><input type="text" id="years" /></td>
+      </tr>
+      <tr>
+        <td>Periods per year</td>
+        <td><input type="text" id="periodsPerYear" /></td>
+      </tr>
+      <tr>
+        <td><button onclick="doFV()">Compute Future Value</button></td>
+        <td><div id="answer"></div></td>
+      </tr>
+    </table>
+  </body>
+</html>
