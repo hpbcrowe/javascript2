@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrays</title>
+    <script>
+      /* Defining Table
+       * Input: no user input
+       * Processing: Test the addEnds and getMiddle functions by calling them.
+       * Output: The values returned from the addEnds and getMiddle functions.
+       */
+      function test() {
+        let list1 = [17, 8, 9, 5, 20];
+        let list2 = [12, 4, 8, 15, 17, 5, 20, 11];
+
+        // Test the addEnds function by calling it two times.
+        let sum1 = addEnds(list1);
+        let sum2 = addEnds(list2);
+
+        // Test the getMiddle function by calling it two times.
+        let mid1 = getMiddle(list1);
+        let mid2 = getMiddle(list2);
+
+        // Build a string to display to the user.
+        let output = sum1 + "<br>" + sum2 + "<br>" + mid1 + "<br>" + mid2;
+
+        // Display the output string for the user to see.
+        document.getElementById("output").innerHTML = output;
+      }
+
+      function addEnds(list) {
+        let first = list[0];
+        let last = list[list.length - 1];
+
+        // console.log(first);
+        // console.log(last);
+
+        let middle = first + last;
+        return middle;
+      }
+
+      function getMiddle(list) {
+        let size = list.length;
+        let middle = (list.length - 1) / 2;
+        digit = list[middle];
+        console.log(digit + " start of function");
+        console.log(list);
+
+        if (size % 2 == 0) {
+          let median = list.length / 2;
+          let low = median - 1;
+          console.log(median + "median");
+          let top = list[median];
+          let bottom = list[low];
+          console.log(top + " " + bottom);
+
+          let sum = top + bottom;
+          let harry = sum / 2;
+          return harry;
+        } else {
+          let bob = list[middle];
+          console.log("else statement " + bob);
+          return bob;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><button onclick="test()"></button></td>
+        <td><div id="output"></div></td>
+      </tr>
+    </table>
+  </body>
+</html>
