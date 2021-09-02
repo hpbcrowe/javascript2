@@ -31,12 +31,14 @@
       }
 
       function addEnds(list) {
+        //get the value in the first index
         let first = list[0];
+        //get the value in the last index(length is always 1 more than index)
         let last = list[list.length - 1];
 
         // console.log(first);
         // console.log(last);
-
+        //combine the first and last value
         let middle = first + last;
         return middle;
       }
@@ -45,12 +47,14 @@
         let size = list.length;
         let middle = (list.length - 1) / 2;
         digit = list[middle];
+        //These console logs are for testing
         console.log(digit + " start of function");
         console.log(list);
 
         if (size % 2 == 0) {
-          let median = list.length / 2;
+          let median = size / 2;
           let low = median - 1;
+
           console.log(median + "median");
           let top = list[median];
           let bottom = list[low];
@@ -60,9 +64,7 @@
           let harry = sum / 2;
           return harry;
         } else {
-          let bob = list[middle];
-          console.log("else statement " + bob);
-          return bob;
+          return list[middle];
         }
       }
     </script>
@@ -70,8 +72,15 @@
   <body>
     <table>
       <tr>
-        <td><button onclick="test()"></button></td>
-        <td><div id="output"></div></td>
+        <td>Press button to</td>
+        <td>Results</td>
+      </tr>
+      <tr>
+        <td><button onclick="test()">Test Functions</button></td>
+        <td>
+          <div></div>
+          <div id="output"></div>
+        </td>
       </tr>
     </table>
   </body>
