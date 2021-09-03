@@ -24,45 +24,35 @@
         let mid2 = getMiddle(list2);
 
         // Build a string to display to the user.
-        let output = sum1 + "<br>" + sum2 + "<br>" + mid1 + "<br>" + mid2;
+        let output =
+          "Results" +
+          "<br>" +
+          sum1 +
+          "<br>" +
+          sum2 +
+          "<br>" +
+          mid1 +
+          "<br>" +
+          mid2;
 
         // Display the output string for the user to see.
         document.getElementById("output").innerHTML = output;
       }
 
       function addEnds(list) {
-        //get the value in the first index
-        let first = list[0];
-        //get the value in the last index(length is always 1 more than index)
-        let last = list[list.length - 1];
-
-        // console.log(first);
-        // console.log(last);
-        //combine the first and last value
-        let middle = first + last;
-        return middle;
+        return list[0] + list[list.length - 1];
       }
 
       function getMiddle(list) {
         let size = list.length;
         let middle = (list.length - 1) / 2;
-        digit = list[middle];
-        //These console logs are for testing
-        console.log(digit + " start of function");
-        console.log(list);
 
         if (size % 2 == 0) {
           let median = size / 2;
           let low = median - 1;
-
-          console.log(median + "median");
           let top = list[median];
           let bottom = list[low];
-          console.log(top + " " + bottom);
-
-          let sum = top + bottom;
-          let harry = sum / 2;
-          return harry;
+          return (top + bottom) / 2;
         } else {
           return list[middle];
         }
@@ -72,8 +62,7 @@
   <body>
     <table>
       <tr>
-        <td>Press button to</td>
-        <td>Results</td>
+        <td><h1>Press Button</h1></td>
       </tr>
       <tr>
         <td><button onclick="test()">Test Functions</button></td>
